@@ -1,0 +1,20 @@
+{% set full_path = page.path ~ path %}
+{% set resized = resize_image(path=full_path, width=900, height=900, op="fit") %}
+{% set webp = resize_image(path=full_path, width=900, height=900, op="fit", format="webp", quality=75) %}
+<figure>
+  <picture>
+    <source srcset="{{ webp.url }}" type="image/webp" />
+    <img
+      loading="lazy"
+      src="{{ resized.url }}"
+      {% if alt %}
+      alt="{{ alt }}"
+      {% endif %}
+    />
+  </picture>
+  {% if caption %}
+    <figcaption>
+    {{ caption }}
+    </figcaption>
+  {% endif %}
+</figure>
