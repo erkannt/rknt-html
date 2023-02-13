@@ -65,7 +65,7 @@ and lower part of the roof face towards the setting sun. The window and
 second platform face the rising sun, creating an alarm clock and
 breakfast room ^^
 
-{{ fig(path="./img/shelterforhumans.jpg, caption="From our design proposal/application.") }}
+{{ fig(path="./img/shelterforhumans.jpg", caption="From our design proposal/application.") }}
 
 Aside from the functional considerations our main driver was simplicity.
 So we went with a single pitch roof, a single window, rectangular
