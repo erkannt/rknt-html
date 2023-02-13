@@ -191,7 +191,7 @@ sufficiently dried, with a lot less hassle than out in the park proper.
 A decent compromise given the frequency with which hikers and cyclists
 camp in the park.
 
-{{ fig(path="./img/Cabin_Photos-20.jpg, caption="It didn’t end up next to the river…") }}
+{{ fig(path="./img/Cabin_Photos-20.jpg", caption="It didn’t end up next to the river…") }}
 
 I’ll always cherish the feeling of stepping into a space previously only
 existed in my head.
