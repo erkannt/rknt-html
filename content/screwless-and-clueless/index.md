@@ -132,9 +132,7 @@ construction steps on two pages of A4. These became our on site plans
 and constant companion over the two week of construction. I wish I knew
 where I put them…
 
-{{fig(
-path="./img/joint-detail.jpg", caption="Detail of one of the joints." />
-)}}
+{{fig(path="./img/joint-detail.jpg", caption="Detail of one of the joints.")}}
 
 ## The Workshop
 
