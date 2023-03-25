@@ -14,4 +14,4 @@ went back to Norway to to a short research project at SINTEF.
 
 {{ pic(path="skrivboard.jpg") }}
 
-[Dowload the plans](./skrivboard/skrivboard-plans.pdf)
+[Dowload the plans](skrivboard-plans.pdf)
