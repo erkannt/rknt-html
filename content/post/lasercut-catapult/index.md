@@ -19,3 +19,5 @@ Files:
 
 - [DXF](catapult_v2_nested_A4_and_200x300.dxf)
 - [Fusion360 model](lasercut_catapult_v12.f3d)
+
+Also published on [Thingiverse](https://www.thingiverse.com/thing:5342967)
