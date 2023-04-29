@@ -109,6 +109,7 @@ video {
 body {
   color: var(--text-color);
   margin: 0 auto;
+  margin-bottom: 8rem;
   max-width: 75ch;
   padding: 0 0.5rem;
 }
@@ -263,6 +264,15 @@ figure figcaption {
 ul,
 ol {
   padding: 0 0 0 4rem;
+}
+
+p + ul,
+p + ol,
+p > ul,
+p > ol,
+li > ul,
+li > ol {
+  margin-top: 0;
 }
 
 dl dd {
