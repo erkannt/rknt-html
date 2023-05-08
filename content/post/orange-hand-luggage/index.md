@@ -8,8 +8,10 @@ title: Small hand luggage
 ## Features
 
 - side zip accessible laptop sleeve
+- 3D-printed roll top hook
 - carrying handle on the side
 - stuff pockets and lots of elastic
+- zippered front access pocket
 - small Ryanair luggage compliant
 - [public domain licensed](https://creativecommons.org/share-your-work/public-domain/cc0/)
 
