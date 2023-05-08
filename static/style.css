@@ -405,6 +405,22 @@ SOFTWARE.
   margin-bottom: 0.3rem;
 }
 
-.gallery img {
+.flat-stacked-gallery img {
   margin: 0.5rem 0;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.gallery a {
+  height: 210px;
+  width: 210px;
+}
+
+.gallery img {
+  margin: 0;
 }
