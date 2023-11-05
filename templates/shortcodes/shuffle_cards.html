@@ -1,0 +1,24 @@
+<div class="shuffle-cards">
+  <div class="shuffle-cards__cards">
+{% for asset in page.assets | sort -%}
+  {%- if asset is matching("[.](jpg|png)$") and asset is containing(folder) -%}
+    {% set image = resize_image(path=asset, height=400, op='fit_height') %}
+    <img src="{{ image.url }}" class="visually-hidden card"/>
+  {%- endif %}
+{%- endfor %}
+  </div>
+  <button id="shuffle" onclick="shuffle()">Shuffle</button>
+</div>
+<script>
+  const cards = document.getElementsByClassName("card");
+  const selectedIndex = Math.floor(Math.random() * cards.length);
+  let selectedCard = cards[selectedIndex];
+  selectedCard.classList.remove("visually-hidden");
+
+  const shuffle = () => {
+    const selectedIndex = Math.floor(Math.random() * cards.length);
+    selectedCard.classList.add("visually-hidden");
+    selectedCard = cards[selectedIndex];
+    selectedCard.classList.remove("visually-hidden");
+  }
+</script>

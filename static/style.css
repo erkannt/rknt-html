@@ -424,3 +424,44 @@ SOFTWARE.
 .gallery img {
   margin: 0;
 }
+
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.shuffle-cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.shuffle-cards button {
+  width: 200px;
+  font-size: 120%;
+  font-weight: bold;
+  background: silver;
+  padding: 10px 20px;
+  border: 0;
+}
+
+.shuffle-cards button:hover {
+  background: darkgrey;
+}
+
+.shuffle-cards button:active {
+  position: relative;
+  top: 3px;
+}
+
+.shuffle-cards__cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+}
