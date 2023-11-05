@@ -1,30 +1,29 @@
 <div class="shuffle-cards">
-  <button id="reveal" onclick="toggleVisibility()">Reveal terrain</button>
+  <button class="shuffle-cards__toggle-visibility">Reveal terrain</button>
   <div class="shuffle-cards__cards">
 {% for asset in page.assets | sort -%}
   {%- if asset is matching("[.](jpg|png)$") and asset is containing(folder) -%}
     {% set image = resize_image(path=asset, height=400, op='fit_height', format='webp', quality=70) %}
-    <img src="{{ image.url }}" class="visually-hidden card card--hidden"/>
+    <img src="{{ image.url }}" class="card card--hidden"/>
   {%- endif %}
 {%- endfor %}
   </div>
-  <button id="shuffle" onclick="shuffle()">Shuffle</button>
+  <button class="shuffle-cards__shuffle">Shuffle</button>
 </div>
 <script>
-  const cards = document.getElementsByClassName("card");
-  const selectedIndex = Math.floor(Math.random() * cards.length);
-  let selectedCard = cards[selectedIndex];
-  selectedCard.classList.remove("visually-hidden");
-
   const shuffle = () => {
+    const previouslySelected = document.querySelector(".card[selected]");
+    if (previouslySelected) {
+      previouslySelected.toggleAttribute("selected");
+    }
+    const cards = document.getElementsByClassName("card");
     const selectedIndex = Math.floor(Math.random() * cards.length);
-    selectedCard.classList.add("visually-hidden");
-    selectedCard = cards[selectedIndex];
-    selectedCard.classList.remove("visually-hidden");
+    cards[selectedIndex].toggleAttribute("selected");
   }
 
   const toggleVisibility = () => {
-    const button = document.getElementById("reveal");
+    const cards = document.getElementsByClassName("card");
+    const button = document.querySelector(".shuffle-cards__toggle-visibility");
     if (button.innerText.includes("Hide")) {
       for (const card of cards) {
         card.classList.add("card--hidden")
@@ -37,4 +36,13 @@
       button.innerText = button.innerText.replace("Reveal", "Hide")
     }
   }
+
+  const shuffleCards = document.querySelector("shuffle-cards");
+  shuffle();
+
+  const shuffleCardsToggle = document.querySelector(".shuffle-cards__toggle-visibility");
+  shuffleCardsToggle.addEventListener("click", toggleVisibility)
+
+  const shuffleCardsShuffle = document.querySelector(".shuffle-cards__shuffle");
+  shuffleCardsShuffle.addEventListener("click", shuffle)
 </script>

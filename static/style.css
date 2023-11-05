@@ -425,16 +425,6 @@ SOFTWARE.
   margin: 0;
 }
 
-.visually-hidden {
-  clip: rect(0 0 0 0);
-  clip-path: inset(50%);
-  height: 1px;
-  overflow: hidden;
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
-}
-
 .shuffle-cards {
   display: flex;
   flex-direction: column;
@@ -472,4 +462,14 @@ SOFTWARE.
 
 .card--hidden{
   filter: contrast(0);
+}
+
+.card:not([selected]) {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
 }
