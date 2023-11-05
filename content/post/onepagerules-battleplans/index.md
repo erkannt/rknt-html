@@ -34,6 +34,9 @@ Standard OnePageRules skirmish rules but:
 
 {{ shuffle_cards(folder="terrain") }}
 
+{{ shuffle_cards(folder="deployment") }}
+
+{{ shuffle_cards(folder="victory") }}
 
 
 ## Misc.

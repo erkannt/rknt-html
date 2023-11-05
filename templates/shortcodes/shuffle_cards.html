@@ -1,5 +1,5 @@
 <div class="shuffle-cards">
-  <button class="shuffle-cards__toggle-visibility">Reveal terrain</button>
+  <button class="shuffle-cards__toggle-visibility">Reveal {{folder}}</button>
   <div class="shuffle-cards__cards">
 {% for asset in page.assets | sort -%}
   {%- if asset is matching("[.](jpg|png)$") and asset is containing(folder) -%}

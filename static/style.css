@@ -429,15 +429,18 @@ SOFTWARE.
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 4rem;
 }
 
 .shuffle-cards button {
-  width: 250px;
+  width: 300px;
   font-size: 120%;
   font-weight: bold;
   background: silver;
   padding: 10px 20px;
   border: 0;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 .shuffle-cards button:hover {
@@ -458,6 +461,7 @@ SOFTWARE.
 
 .card {
   border-radius: 12px;
+  margin: 0;
 }
 
 .card--hidden{
