@@ -442,7 +442,7 @@ SOFTWARE.
 }
 
 .shuffle-cards button {
-  width: 200px;
+  width: 250px;
   font-size: 120%;
   font-weight: bold;
   background: silver;
@@ -464,4 +464,12 @@ SOFTWARE.
   flex-wrap: wrap;
   gap: 0.5rem;
   justify-content: center;
+}
+
+.card {
+  border-radius: 12px;
+}
+
+.card--hidden{
+  filter: contrast(0);
 }

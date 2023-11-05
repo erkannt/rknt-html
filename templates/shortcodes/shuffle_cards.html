@@ -1,9 +1,10 @@
 <div class="shuffle-cards">
+  <button id="reveal" onclick="toggleVisibility()">Reveal terrain</button>
   <div class="shuffle-cards__cards">
 {% for asset in page.assets | sort -%}
   {%- if asset is matching("[.](jpg|png)$") and asset is containing(folder) -%}
-    {% set image = resize_image(path=asset, height=400, op='fit_height') %}
-    <img src="{{ image.url }}" class="visually-hidden card"/>
+    {% set image = resize_image(path=asset, height=400, op='fit_height', format='webp', quality=70) %}
+    <img src="{{ image.url }}" class="visually-hidden card card--hidden"/>
   {%- endif %}
 {%- endfor %}
   </div>
@@ -20,5 +21,20 @@
     selectedCard.classList.add("visually-hidden");
     selectedCard = cards[selectedIndex];
     selectedCard.classList.remove("visually-hidden");
+  }
+
+  const toggleVisibility = () => {
+    const button = document.getElementById("reveal");
+    if (button.innerText.includes("Hide")) {
+      for (const card of cards) {
+        card.classList.add("card--hidden")
+      }
+      button.innerText = button.innerText.replace("Hide", "Reveal")
+    } else {
+      for (const card of cards) {
+        card.classList.remove("card--hidden")
+      }
+      button.innerText = button.innerText.replace("Reveal", "Hide")
+    }
   }
 </script>
