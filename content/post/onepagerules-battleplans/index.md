@@ -46,3 +46,44 @@ Ideas for further constraints:
 - limit armies to one non-hero _Tough_ unit
 - limit armies to 10/12 _Tough_ points/model counts
 
+
+<script>
+  const shuffle = (element) => () => {
+    const previouslySelected = element.querySelector(".card[selected]");
+    if (previouslySelected) {
+      previouslySelected.toggleAttribute("selected");
+    }
+    const cards = element.getElementsByClassName("card");
+    const selectedIndex = Math.floor(Math.random() * cards.length);
+    cards[selectedIndex].toggleAttribute("selected");
+  }
+
+  const toggleVisibility = (element) => () => {
+    const cards = element.getElementsByClassName("card");
+    const button = element.querySelector(".shuffle-cards__toggle-visibility");
+    if (button.innerText.includes("Hide")) {
+      for (const card of cards) {
+        card.classList.add("card--hidden")
+      }
+      button.innerText = button.innerText.replace("Hide", "Reveal")
+    } else {
+      for (const card of cards) {
+        card.classList.remove("card--hidden")
+      }
+      button.innerText = button.innerText.replace("Reveal", "Hide")
+    }
+  }
+
+  const allShuffleCards = document.querySelectorAll(".shuffle-cards");
+
+  for (const shuffleCards of allShuffleCards) {
+    console.log(shuffleCards);
+    shuffle(shuffleCards)();
+
+    const shuffleCardsToggle = shuffleCards.querySelector(".shuffle-cards__toggle-visibility");
+    shuffleCardsToggle.addEventListener("click", toggleVisibility(shuffleCards))
+
+    const shuffleCardsShuffle = shuffleCards.querySelector(".shuffle-cards__shuffle");
+    shuffleCardsShuffle.addEventListener("click", shuffle(shuffleCards))
+  }
+</script>
