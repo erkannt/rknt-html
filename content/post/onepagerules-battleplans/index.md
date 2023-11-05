@@ -2,7 +2,7 @@
 title: OnePageRules Battleplans
 ---
 
-Inspired by [ULC Battle Reports](https://www.youtube.com/watch?v=8nhhRVgH-_E) this is how we currently play OnePageRules skirmish games.
+Inspired by [ULC Battle Reports](https://www.youtube.com/watch?v=8nhhRVgH-_E) this is how we currently play OnePageRules skirmish games using WarCry battleplan cards.
 
 - fast setup as there are fewer decisions
 - games feel unique
