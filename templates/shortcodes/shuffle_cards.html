@@ -4,7 +4,7 @@
 {% for asset in page.assets | sort -%}
   {%- if asset is matching("[.](jpg|png)$") and asset is containing(folder) -%}
     {% set image = resize_image(path=asset, height=400, op='fit_height', format='webp', quality=70) %}
-    <img src="{{ image.url }}" class="card card--hidden"/>
+    <img src="{{ image.url }}" class="card card--hidden" loading="lazy"/>
   {%- endif %}
 {%- endfor %}
   </div>

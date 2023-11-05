@@ -2,6 +2,8 @@
 title: OnePageRules Battleplans
 ---
 
+{{ pic_eager(path="./deployment.jpg") }}
+
 Inspired by [ULC Battle Reports](https://www.youtube.com/watch?v=8nhhRVgH-_E) this is how we currently play OnePageRules skirmish games using WarCry battleplan cards.
 
 - fast setup as there are fewer decisions
@@ -47,6 +49,8 @@ Ideas for further constraints:
 - limit armies to one non-hero _Tough_ unit
 - limit armies to 10/12 _Tough_ points/model counts
 
+
+{{ pic_eager(path="./battle.jpg") }}
 
 <script>
   const shuffle = (element) => () => {
