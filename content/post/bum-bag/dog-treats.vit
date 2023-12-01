@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vit>
+    <!--Measurements created with Seamly2D v2023.5.22.158 (http://seamly.net/).-->
+    <version>0.3.3</version>
+    <read-only>false</read-only>
+    <notes/>
+    <unit>cm</unit>
+    <pm_system>998</pm_system>
+    <personal>
+        <family-name/>
+        <given-name/>
+        <birth-date>1800-01-01</birth-date>
+        <gender>unknown</gender>
+        <email/>
+    </personal>
+    <body-measurements>
+        <m name="@inch" value="2.54"/>
+        <m name="@seam" value="@inch/2"/>
+        <m name="@corner_radius" value="2"/>
+        <m name="@width" value="16+@corner_radius"/>
+        <m name="@height" value="8"/>
+        <m name="@depth" value="7"/>
+        <m name="@pouch_depth" value="2"/>
+        <m name="@pouch_inset" value="2"/>
+        <m name="@rolltop" value="@depth"/>
+        <m name="@tape_width" value="@inch"/>
+    </body-measurements>
+</vit>
