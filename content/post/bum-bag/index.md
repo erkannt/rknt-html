@@ -19,6 +19,10 @@ title: Parametric bum bag
 - pattern pieces as sewn [A4 pdf](./bum-bag_pieces.pdf) [Inkscape svg](./bum-bag_pieces.svg)
 
 
+## Other peoples versions
+
+{{ fig(path="./ArdenBr0w.jpeg", caption="Gloriously coloured version make by ArdenBr0w (reddit). Very jealous of that red ripstop.")}}
+
 ## Hook
 
 {{ pic(path="./hook.png") }}
