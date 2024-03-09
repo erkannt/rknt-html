@@ -1,7 +1,7 @@
 .phony: *
 
 dev:
-	zola serve
+	zola serve -p 8080
 
 release:
 	zola build
