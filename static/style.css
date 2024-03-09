@@ -220,6 +220,7 @@ samp,
 pre,
 var {
   font-family: monospace;
+  font-size: 90%;
 }
 code,
 pre {
@@ -230,6 +231,13 @@ pre {
 code pre,
 pre code {
   padding: 0;
+  line-height: 1;
+}
+
+p code,
+li code {
+  padding: 0;
+  background: unset;
 }
 
 /* Elements */
