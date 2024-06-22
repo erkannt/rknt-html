@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<vit>
+    <!--Measurements created with Seamly2D v2023.5.22.158 (http://seamly.net/).-->
+    <version>0.3.3</version>
+    <read-only>false</read-only>
+    <notes/>
+    <unit>cm</unit>
+    <pm_system>998</pm_system>
+    <personal>
+        <family-name/>
+        <given-name/>
+        <birth-date>1800-01-01</birth-date>
+        <gender>unknown</gender>
+        <email/>
+    </personal>
+    <body-measurements>
+        <m name="@pi" value="3.141"/>
+        <m full_name="1&quot;" name="@inch" value="2.54"/>
+        <m full_name="1/8&quot;" name="@eights" value="@inch/8"/>
+        <m name="@seam_allowance" value="@inch / 2"/>
+        <m full_name="Bag Width" name="@width" value="40"/>
+        <m full_name="Bag Length" name="@length" value="60"/>
+        <m full_name="Bag Height" name="@height" value="25"/>
+        <m full_name="Corner Radius" name="@corner_radius" value="4"/>
+        <m full_name="" name="@corner_length" value="@pi * @corner_radius / 2"/>
+        <m description="This governs by how much the triangular flap, shaped by closing the zipper and folding over the end, is made shorter." full_name="End flap shortening" name="@zipper_end_flap_shortening" value="10"/>
+        <m description="Space between straps at top of pocket" full_name="Top pocket width" name="@pocket_top" value="32"/>
+        <m description="Space between straps at bottom of pocket" full_name="Bottom pocket width" name="@pocket_bottom" value="40"/>
+        <m description="How much depth to add to the pocket with the corner dart" full_name="Pocket depth created by dart" name="@pocket_dart" value="3"/>
+        <m name="@pocket_dart_angle" value="60"/>
+        <m description="Width of pocket's pleat" full_name="Pocket pleat width" name="@pocket_pleat" value="3"/>
+        <m full_name="Pocket elastic width" name="@pocket_elastic" value="@inch"/>
+        <m full_name="Pocket zip offset from top" name="@pocket_zip_offset" value="@pocket_dart + 2"/>
+    </body-measurements>
+</vit>
