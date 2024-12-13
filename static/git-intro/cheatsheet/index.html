@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>git Cheatsheet</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="body | flow-large">
+    <h1>git Cheatsheet</h1>
+    <nav class="toc">
+      <ul class="flow" style="--flow-space: 0.5em">
+        <li><a href="#command-line">Command line basics</a></li>
+        <li><a href="#git-setup">Setting up git</a></li>
+        <li><a href="#using-git">Using version control</a></li>
+        <li><a href="#collaboration">Collaborating with others</a></li>
+      </ul>
+    </nav>
+
+    <section>
+      <h2 id="command-line">Command line basics</h2>
+      <section class="flow">
+        <p>
+          Developing some familiarity with the command line will come in very
+          handy.
+        </p>
+
+        <dl class="indent">
+          <dt><code>pwd</code></dt>
+          <dd>print the path of the directory you are in</dd>
+          <dt><code>cd PATH</code></dt>
+          <dd>change to the directory at a given PATH</dd>
+          <dt><code>cd</code></dt>
+          <dd>
+            without a PATH <code>cd</code> takes you to your
+            <code>home</code> directory
+          </dd>
+          <dt><code>rm PATH</code></dt>
+          <dd>delete a file</dd>
+          <dt><code>rm -r PATH</code></dt>
+          <dd>delete a folder (the 'r' stands for recursive)</dd>
+          <dt><code>cp SOURCE DESTINATION</code></dt>
+          <dd>copy a file</dd>
+          <dt><code>cp -r SOURCE DESTINATION</code></dt>
+          <dd>copy a folder</dd>
+          <dt><code>mkdir PATH</code></dt>
+          <dd>create an empty folder</dd>
+          <dt><code>mv SOURCE DESTINATION</code></dt>
+          <dd>move a file or folder</dd>
+        </dl>
+      </section>
+
+      <section class="flow">
+        <p>
+          When using paths on the command line you will come across some
+          conventions.
+        </p>
+
+        <dl class="indent">
+          <dt><code>.</code></dt>
+          <dd>a single dot is the current directory</dd>
+          <dt><code>..</code></dt>
+          <dd>two dots is the containing directory</dd>
+          <dt><code>~</code></dt>
+          <dd>
+            a tilde is your home directory e.g. <code>/home/alice</code> (Linux
+            etc.) or <code>/Users/bob</code> (Mac OS)
+          </dd>
+          <dt><code>/</code></dt>
+          <dd>
+            any path starting with a forward slash will be referring to the root
+            of our entire filesystem
+          </dd>
+        </dl>
+
+        So given a file path of
+        <code>/home/alice/Desktop/code/2024-zebrafish-plots</code> if you are in
+        the <code>Desktop</code> you could move into the plots directory in many
+        different ways:
+
+        <pre>
+cd /home/alice/Desktop/code/2024-zebrafish-plots
+cd ~/Desktop/code/2024-zebrafish-plots
+cd ./code/2024-zebrafish-plots
+cd ../alice/Desktop/code/2024-zebrafish-plots
+cd ./code/../code/../code/../../Desktop/code/2024-zebrafish-plots</pre
+        >
+        <p>
+          The last is very silly on purpose to show you relative path movements.
+        </p>
+
+        <p>
+          You will come across the concept of <em>absolute</em> and
+          <em>relative</em> file paths.
+        </p>
+
+        <dl>
+          <dt><code>/home/alice/Desktop/code/2024-zebrafish-plots</code></dt>
+          <dd>
+            an absolute file path as it starts at the root of the filesystem
+          </dd>
+          <dt><code>/home/alice/Desktop/code/2024-zebrafish-plots</code></dt>
+          <dd>
+            an absolute file path as it starts at the root of the filesystem
+          </dd>
+        </dl>
+      </section>
+    </section>
+
+    <section>
+      <h2 id="git-setup">Setting up git</h2>
+      <h3>Installing git</h3>
+      <p>
+        To install git follow the official instructions for your operating
+        system:
+      </p>
+      <ul>
+        <li><a href="https://git-scm.com/download/linux">Linux/Unix</a></li>
+        <li>
+          <a href="https://git-scm.com/download/mac">macOS</a> (I recommend
+          using <code>homebrew</code>)
+        </li>
+        <li>
+          <a href="https://git-scm.com/download/win">Windows</a> (if I had to
+          use Windows I'd probably use WSL so that I had access to Linux
+          tooling)
+        </li>
+      </ul>
+
+      <h3>Basic git configuration</h3>
+      <p>If you haven't used git on your computer before.</p>
+      <pre>
+git config --global user.name "FIRSTNAME LASTNAME"
+git config --global user.email "YOUR-EMAIL"</pre
+      >
+      <p>
+        Whenever you make a commit your name and email are used for the 'author'
+        metadata.
+      </p>
+
+      <p>
+        You can also run the following to make git command output easier to
+        read.
+      </p>
+      <code> git config --global color.ui auto </code>
+    </section>
+
+    <section>
+      <h2 id="using-git">Using version control</h2>
+      <h3>Starting from scratch</h3>
+
+      <p>
+        Inside the folder you want to version control: <code> git init </code>
+      </p>
+
+      <p>
+        This will create the hidden <code>.git</code> directory that git uses as
+        storage.
+      </p>
+
+      <h3>Cloning an existing repository</h3>
+
+      <p>
+        Cloning creates a copy of an existing repository on your machine.
+        Depending on the address you use when cloning it will use a different
+        form of authentication.
+      </p>
+
+      <dl>
+        <dt>
+          <code>git clone git@github.com:erkannt/crop-and-rotate.git</code>
+        </dt>
+        <dd>This will use SSH key based authentication</dd>
+        <dt>
+          <code>git clone https://github.com/erkannt/crop-and-rotate.git</code>
+        </dt>
+        <dd>This will use username/password based authentication</dd>
+      </dl>
+
+      <h3>Committing changes</h3>
+      <p>The workflow is always:</p>
+      <ol>
+        <li>make your changes</li>
+        <li><em>stage</em> the changes you want to commit</li>
+        <li><em>commit</em> your changes with a message</li>
+      </ol>
+
+      <dl>
+        <dt><code>git add .</code></dt>
+        <dd><i>stage</i> all of your changes</dd>
+        <dt><code>git add PATH</code></dt>
+        <dd><i>stage</i> only the changes inside PATH</dd>
+        <dt><code>git add -p</code></dt>
+        <dd>interactively <i>stage</i> files or parts of files</dd>
+        <dt><code>git commit -m "MESSAGE"</code></dt>
+        <dd><i>commit</i> staged changes with MESSAGE</dd>
+        <dt><code>git commit</code></dt>
+        <dd>
+          opens a text editor for you to write your commit message before
+          committing
+        </dd>
+        <dt><code>git restore PATH</code></dt>
+        <dd>discard changes to a specific file</dd>
+        <dt><code>git restore --staged PATH</code></dt>
+        <dd>un-stage a change (does not discard the change)</dd>
+        <dt><code>git reset --hard</code></dt>
+        <dd>discards all changes you have made since the last commit</dd>
+      </dl>
+
+      <h3>Viewing state and history</h3>
+      <p>
+        There are a variety of ways to see what has happened in the past and
+        what your current state is.
+      </p>
+      <dl>
+        <dt><code>git status</code></dt>
+        <dd>
+          shows you what you have changed and <i>staged</i> (if in doubt run
+          this)
+        </dd>
+        <dt><code>git log</code></dt>
+        <dd>see a history of your commits</dd>
+        <dt>
+          <code>git log --graph --oneline --decorate --branches --all</code>
+        </dt>
+        <dd>a compact view of history</dd>
+        <dt><code>git diff</code></dt>
+        <dd>see your current changes</dd>
+        <dt><code>git show</code></dt>
+        <dd>see the changes the last commit made</dd>
+        <dt><code>git show SHA</code></dt>
+        <dd>
+          see the changes a specific commit made <br />
+          (you can find the SHA by using <code>git log</code>)
+        </dd>
+      </dl>
+    </section>
+
+    <section>
+      <h2 id="collaboration">Collaborating with others</h2>
+
+      <dl>
+        <dt><code>git pull</code></dt>
+        <dd>
+          pull changes from the remote to bring your repository up to date
+        </dd>
+        <dt><code>git push</code></dt>
+        <dd>push your changes to the remote</dd>
+        <dt><code>git pull --rebase</code></dt>
+        <dd>
+          useful if you and the remote both have changes<br />will pull the
+          remote changes and apply yours on top
+        </dd>
+        <dt><code>git remote -v</code></dt>
+        <dd>list the remotes configured for your local repository</dd>
+      </dl>
+    </section>
+  </body>
+</html>
