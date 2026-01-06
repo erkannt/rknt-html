@@ -1,4 +1,6 @@
 ---
+date: 2025-01-10T16:35:39Z
+updated: 2025-01-10T16:53:53Z
 title: Parametric laser cut lamp 
 ---
 

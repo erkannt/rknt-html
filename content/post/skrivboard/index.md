@@ -1,4 +1,6 @@
 ---
+date: 2023-03-25T13:57:58Z
+updated: 2023-03-25T14:43:44Z
 title: Skrivboard
 ---
 I designed and built this desk as part of the Design in Wood course at NTNU.

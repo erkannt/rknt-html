@@ -1,4 +1,6 @@
 ---
+date: 2023-12-01T19:12:18Z
+updated: 2023-12-06T07:38:43Z
 title: Parametric bum bag
 ---
 

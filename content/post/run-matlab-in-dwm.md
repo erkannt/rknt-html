@@ -1,4 +1,6 @@
 ---
+date: 2025-04-19T11:52:34+01:00
+updated: 2025-04-19T11:52:34+01:00
 title: Running Matlab in DWM
 ---
 

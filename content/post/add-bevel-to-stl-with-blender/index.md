@@ -1,4 +1,6 @@
 ---
+date: 2023-04-29T15:59:10+01:00
+updated: 2023-04-29T15:59:10+01:00
 title: How to add bevels to STLs
 ---
 
