@@ -18,6 +18,7 @@ author="Daniel Haarhoff"
 # Whether to do syntax highlighting
 # Theme can be customised by setting the `highlight_theme` variable to a theme supported by Zola
 highlight_code = false
+bottom_footnotes = true
 
 [extra]
 # Put all your custom variables here

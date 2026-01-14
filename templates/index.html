@@ -47,6 +47,13 @@
                 <h1>Things I have made</h1>
                 {% set toc = get_page(path="toc.md") %}
                 {{ toc.content | safe }}
+                <h2>Ramblings</h2>
+                {% set ramblings = get_section(path="ramblings/_index.md") %}
+                <ul>
+                    {% for page in ramblings.pages %}
+                    <li>{{ page.date | date(format="%d. %b '%y") }} <a href="{{ page.permalink }}">{{ page.title }}</a></li>
+                    {% endfor %}
+                </ul>
             </nav>
         </main>
     </body>
