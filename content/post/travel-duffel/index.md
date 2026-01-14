@@ -6,7 +6,7 @@ title: Travel Duffel
 
 {{ pic(path="./final.jpg") }}
 
-A re-imagining of my [old faithful duffel]('/post/red-duffel').
+A re-imagining of my [old faithful duffel](@/post/red-duffel/index.md).
 
 ## Features
 
