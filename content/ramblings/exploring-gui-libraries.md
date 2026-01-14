@@ -57,7 +57,7 @@ So now I wanted to explore ways to build a clientside browser application. I hav
 
 ## Web App libraries/frameworks I tried
 ### [Leptos](https://leptos.dev)
-Wanting saner tooling I thought I'd check out offerings from the Rust world. Previously I had used [seed](https://github.com/seed-rs/seed) to build [text2tabletop](https://text2tabletop.rknt.de/) . It uses 'The Elm Architecture' (TEA) which I knew from building [freeyourscience](https://freeyourscience.or) in Elm. However seed in no longer maintained, so I tried Leptos.
+Wanting saner tooling I thought I'd check out offerings from the Rust world. Previously I had used [seed](https://github.com/seed-rs/seed) to build [text2tabletop](https://text2tabletop.rknt.de/) . It uses 'The Elm Architecture' (TEA) which I knew from building [freeyourscience](https://freeyourscience.or) in Elm. However seed is no longer maintained, so I tried Leptos.
 
 I liked writing regular HTML, struggled with the React inspired model, but finally bounced off the Rust syntax. A quote that sums it up for me:
 
