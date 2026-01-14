@@ -1,13 +1,10 @@
-# The URL the site will be built for
 base_url = "https://rknt.de"
 
 title = "rknt"
 description = "Personal page of Daniel Haarhoff"
 
-# Whether to automatically compile all Sass files in the sass directory
 compile_sass = false
 
-# Whether to build a search index to be used later on by a JavaScript library
 build_search_index = false
 
 generate_feeds = true
@@ -15,10 +12,6 @@ feed_filenames = ["atom.xml", "rss.xml"]
 author="Daniel Haarhoff"
 
 [markdown]
-# Whether to do syntax highlighting
-# Theme can be customised by setting the `highlight_theme` variable to a theme supported by Zola
 highlight_code = false
 bottom_footnotes = true
-
-[extra]
-# Put all your custom variables here
+smart_punctuation = true

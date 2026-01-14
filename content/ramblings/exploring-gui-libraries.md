@@ -61,7 +61,7 @@ Wanting saner tooling I thought I'd check out offerings from the Rust world. Pre
 
 I liked writing regular HTML, struggled with the React inspired model, but finally bounced off the Rust syntax. A quote that sums it up for me:
 
-> Go is too simple to write complicated programs, while Rust is too complicated to write simple programs. It all depends which problem you’d rather have.
+> Go is too simple to write complicated programs, while Rust is too complicated to write simple programs. It all depends which problem you’d rather have.  
 > -- [John Arundel](https://bitfieldconsulting.com/posts/rust-vs-go)
 
 ### [Elm Land](https://elm.land)

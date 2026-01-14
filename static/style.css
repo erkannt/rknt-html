@@ -173,6 +173,7 @@ a:visited {
 a:hover,
 a:focus {
   color: var(--link-color-alt);
+  text-decoration-thickness: 3px;
 }
 
 strong,
@@ -195,8 +196,7 @@ small {
 
 blockquote,
 q {
-  background: var(--secondary-color);
-  border-left: 10px solid var(--primary-color);
+  border-left: 3px solid var(--text-color);
   display: block;
   font-family: "Georgia", serif;
   padding: 1rem;
@@ -484,4 +484,9 @@ SOFTWARE.
   position: absolute;
   white-space: nowrap;
   width: 1px;
+}
+
+.footnotes {
+    margin-top: 6rem;
+    border-top: 1px solid var(--text-color-secondary)
 }
