@@ -1,5 +1,5 @@
 ---
-date: 2025-12-29T13:43:29+00:00
+date: 2026-01-15T08:53:26Z
 title: Why I run Alpine Linux on a speaker
 ---
 
@@ -38,7 +38,7 @@ However, the go-librespot binary file did not run. This is due to one of the rea
 
 ## Why not Alpine
 
-Most Linux distributions and software rely on `glibc` (The GNU C Library). This the library that provides "such foundational facilities as open, read, write, malloc, printf, getaddrinfo, dlopen, pthread_create, crypt, login, exit and more" ([glibc homepage](https://www.gnu.org/software/libc/)). `musl` is an alternative implementation of the same APIs that is often chosen for its smaller footprint (and surface area), easier static linking and cross-compilation.
+Most Linux distributions and software rely on `glibc` (The GNU C Library). This the library that provides "such foundational facilities as open, read, write, malloc, printf, getaddrinfo, dlopen, pthread_create, crypt, login, exit and more" ([glibc homepage](https://www.gnu.org/software/libc/)). `musl` is an alternative implementation of the same APIs. It usually chosen for its smaller footprint (and surface area), easier static linking and cross-compilation.
 
 Luckily there is the `gcompat` package for Alpine. This provides a compatibility layer for `glibc`. Apparently it does not work in all cases, but `go-librespot` runs perfectly fine.
 
