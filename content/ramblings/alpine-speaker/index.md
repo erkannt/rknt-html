@@ -1,6 +1,8 @@
 ---
 date: 2026-01-15T08:53:26Z
 title: Why I run Alpine Linux on a speaker
+extra: 
+  image: ramblings/alpine-speaker/speaker-back.jpg
 ---
 
 {{ pic(path="./speaker-back.jpg", alt="RPi with amplifier hat in a 3D printed case mounted to the back of a speaker sitting on a messy desk.") }}
